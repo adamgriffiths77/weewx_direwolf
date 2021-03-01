@@ -19,6 +19,9 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 4. Direwolf transmits the APRS message via the 2M hand-held radio
 5. APRS message received by any iGate within radio range.
 
+Output can be seen on the aprs.fi website for my callsign
+https://aprs.fi/info/a/VK3AGD-9
+
 # modifications from out-of-the-box weewx and direwolf
 
 ## direwolf 
