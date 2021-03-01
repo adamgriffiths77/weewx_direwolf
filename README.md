@@ -9,6 +9,7 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - weewx weatherstation software (starts rtl_433 and is filtered for my external WS-1080 weatherstation)
 - WS-1080 based weatherstation (cheap but works)
 - direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
+- cheap USB audio card with custom cable to my radio
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 
 # Weatherstation operation
@@ -24,5 +25,6 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 -direwolf: the only modification is the cron script to add starting kisstnc.
 -direwolf is started with the following cron "* * * * * /root/dw-start.sh >/dev/null 2>&1"
 -using the file in the direwolf directory
+-others can read the file and figure out where callsign data and PTT GPIO are used and how to wire up a radio so I'm not going to describe that part here (unless I have to rebuild the whole thing and figure out out again...I haven't done the physical part for good 10 years).
 
-weewx
+## weewx
