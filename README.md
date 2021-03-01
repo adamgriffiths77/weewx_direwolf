@@ -4,12 +4,12 @@ Code added to get weewx to talk to direwolf APRS client using kiss to send weath
 This directory contains the files used on my raspberry pi (ws-2) for APRS weatherstations.
 
 # Hardware/Software Configuration
--Raspberry pi 4
--RTL-SDR dongle to pull weatherstations via the use of RTL_433 decoder
--weewx weatherstation software (starts rtl_433 and is filtered for my external WS-1080 weatherstation)
--WS-1080 based weatherstation (cheap but works)
--direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
--direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
+- Raspberry pi 4
+- RTL-SDR dongle to pull weatherstations via the use of RTL_433 decoder
+- weewx weatherstation software (starts rtl_433 and is filtered for my external WS-1080 weatherstation)
+- WS-1080 based weatherstation (cheap but works)
+- direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
+- direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 
 # Weatherstation operation
 1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.
