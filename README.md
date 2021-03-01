@@ -12,7 +12,7 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - cheap USB audio card with custom cable to my radio
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 
-# Weatherstation operation
+# Weatherstation Operation
 1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.
 2. weex outputs the weather data ion APRS format to a text file every 30 mins.  This is a modified version of the APRS client, using learning from the CWOP and YAAC code
 3. KissTNC is configured to watch the output directory of the text file and converts any file in that directory to a properly formatted TNC data string and passes it on to direwolf TNC
