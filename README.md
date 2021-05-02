@@ -9,7 +9,8 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - weewx weatherstation software (starts rtl_433 and is filtered for my external WS-1080 weatherstation)
 - WS-1080 based weatherstation (cheap but works)
 - direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
-- cheap USB audio card with custom cable to my radio (Wouxun KG-UV6D)
+- cheap USB audio card with custom cable to my radio
+- Wouxun KG-UV6D 2m/70cm handheld radio, running off a battery eliminator, with squelch turned off to assist with receiving other APRS messages.
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 - Diamond X30N 2m/70cm antenna mounted at the ridge line of my house.
 - 12V to USB 3A converter to power the pi
