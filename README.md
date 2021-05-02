@@ -37,7 +37,8 @@ https://aprs.fi/info/a/VK3AGD-5 (iGate)
 -others can read the file and figure out where callsign data and PTT GPIO are used and how to wire up a radio so I'm not going to describe that part here (unless I have to rebuild the whole thing and figure out out again...I haven't done the physical part for good 10 years).
 -direwolf is also configured as an iGate and sending data to aprs.fi.  Using the code generated from my callsign at http://apps.magicbug.co.uk/passcode/
 
-##KissUtil
+## KissUtil
+-configured to start automatically via the dw-start.sh script.
 -is configured to read the /root/send directory for messages to send out 
 -is configured to write to the /root/recieve directory for messages decoded by direwolf.
 
