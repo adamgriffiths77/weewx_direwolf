@@ -12,6 +12,8 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - cheap USB audio card with custom cable to my radio (Wouxun KG-UV6D)
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 - Diamond X30N 2m/70cm antenna mounted at the ridge line of my house.
+- 12V to USB 3A converter to power the pi
+- cheap 5V relay, plus misc stuff to get it to connect to the pi. A transistor and a couple of resistors, and a capacitor across the relay output to reducing ringing that was locking up my rado.
 
 # Weatherstation Operation
 1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.  This is a lot cleaner and more reliable that using the indoor weather stations, which has an un-reliable USB implementation that usually hangs a couple of times a week.
