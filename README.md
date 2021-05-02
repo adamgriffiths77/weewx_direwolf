@@ -53,6 +53,6 @@ This is a modified version of the aprs driver that is provided with weewx.  The 
 NOTE: I have noticed that there's a couple of hardcoded variables (ie callsign and path), which I should move to a variable when I get a chance. 5 min job but not important give it works pretty much perfectly.
 
 # Next Steps/improvements
-a) figure out why the Pi sometimes complains of low power.  I think my relay setup is pulling too much off the 5V rail
-b) mount the entire system in a nice box, with only an antenna output N-connector, an an SMA for the 433Mhz receive, and an anderson plug for power
-c) include an old 2M amplifer that I've got sitting around to boost the output power to 20W.  Not needed but it's been sitting around spare for 5 years.
+1. figure out why the Pi sometimes complains of low power.  I think my relay setup is pulling too much off the 5V rail
+2. mount the entire system in a nice box, with only an antenna output N-connector, an an SMA for the 433Mhz receive, and an anderson plug for power
+3. include an old 2M amplifer that I've got sitting around to boost the output power to 20W.  Not needed but it's been sitting around spare for 5 years.
