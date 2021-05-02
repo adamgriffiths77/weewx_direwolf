@@ -11,6 +11,7 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
 - cheap USB audio card with custom cable to my radio (Wouxun KG-UV6D)
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
+- Diamond X30N 2m/70cm antenna mounted at the ridge line of my house.
 
 # Weatherstation Operation
 1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.  This is a lot cleaner and more reliable that using the indoor weather stations, which has an un-reliable USB implementation that usually hangs a couple of times a week.
@@ -50,3 +51,8 @@ This directory contains the files that are modified for Weewx to correctly obtai
 
 This is a modified version of the aprs driver that is provided with weewx.  The included driver assumes that the APRS message is being sent to a full external TNC (which provides the callsign and path data) hence this driver is modified to including the callsign, destination and path info.  It is also modified (at teh bottom) to output the completed APRS packet to the output file specified in weewx.conf rather than a serial port.  This is the file which is then picked up by direwolf to transmit the packet.
 NOTE: I have noticed that there's a couple of hardcoded variables (ie callsign and path), which I should move to a variable when I get a chance. 5 min job but not important give it works pretty much perfectly.
+
+# Next Steps/improvements
+a) figure out why the Pi sometimes complains of low power.  I think my relay setup is pulling too much off the 5V rail
+b) mount the entire system in a nice box, with only an antenna output N-connector, an an SMA for the 433Mhz receive, and an anderson plug for power
+c) include an old 2M amplifer that I've got sitting around to boost the output power to 20W.  Not needed but it's been sitting around spare for 5 years.
