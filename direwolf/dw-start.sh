@@ -88,7 +88,7 @@ function CLI {
    echo "-----------------------"
    echo "-----------------------" >> $LOGFILE
    sleep 5
-   $SCREEN -d -m -s kisstnc kissutil -f /root/send >> $LOGFILE
+   $SCREEN -d -m -s kisstnc kissutil -f /root/send -o /root/recieve >> $LOGFILE
    $SCREEN -list kisstnc
    $SCREEN -list kisstnc >> $LOGFILE
 }
