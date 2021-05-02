@@ -9,26 +9,34 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - weewx weatherstation software (starts rtl_433 and is filtered for my external WS-1080 weatherstation)
 - WS-1080 based weatherstation (cheap but works)
 - direwolf software TNC configured to automatically start via a cronjob refering the dw-start.sh script
-- cheap USB audio card with custom cable to my radio
+- cheap USB audio card with custom cable to my radio (Wouxun KG-UV6D)
 - direwolf uses a Wouxon 2m Amateur handheld radio as the RF interfaace, using a usb audio dongle and a relay connected to GPIO to trigger the PTT.
 
 # Weatherstation Operation
-1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.
-2. weex outputs the weather data ion APRS format to a text file every 30 mins.  This is a modified version of the APRS client, using learning from the CWOP and YAAC code
+1. weewx is configured to obtain data for the WS-1080 weather station using the RTLSDR option.  This is a lot cleaner and more reliable that using the indoor weather stations, which has an un-reliable USB implementation that usually hangs a couple of times a week.
+2. weex outputs the weather data in APRS format to a text file every 30 mins.  This is a modified version of the APRS client, using learning from the CWOP and YAAC code
 3. KissTNC is configured to watch the output directory of the text file and converts any file in that directory to a properly formatted TNC data string and passes it on to direwolf TNC
 4. Direwolf transmits the APRS message via the 2M hand-held radio
 5. APRS message received by any iGate within radio range.
+6. Direwolf also uploads this and any other received radio APRS messages to aprs.fi
 
 Output can be seen on the aprs.fi website for my callsign
-https://aprs.fi/info/a/VK3AGD-9
+https://aprs.fi/info/a/VK3AGD-9 (weatherstation)
+https://aprs.fi/info/a/VK3AGD-5 (iGate)
+
 
 # modifications from out-of-the-box weewx and direwolf
 
 ## direwolf 
 -direwolf: the only modification is the cron script to add starting kisstnc.
 -direwolf is started with the following cron "* * * * * /root/dw-start.sh >/dev/null 2>&1"
--using the file in the direwolf directory
+-using the file in the direwolf directory (currently runs at root, although this is a bad idea
 -others can read the file and figure out where callsign data and PTT GPIO are used and how to wire up a radio so I'm not going to describe that part here (unless I have to rebuild the whole thing and figure out out again...I haven't done the physical part for good 10 years).
+-direwolf is also configured as an iGate and sending data to aprs.fi.  Using the code generated from my callsign at http://apps.magicbug.co.uk/passcode/
+
+##KissUtil
+-is configured to read the /root/send directory for messages to send out 
+-is configured to write to the /root/recieve directory for messages decoded by direwolf.
 
 ## weewx
 This directory contains the files that are modified for Weewx to correctly obtain data from the weatherstation using RTL_433 and also export the data into the listed text files.
