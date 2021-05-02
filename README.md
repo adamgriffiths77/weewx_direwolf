@@ -39,9 +39,9 @@ https://aprs.fi/info/a/VK3AGD-5 (iGate)
 - direwolf is also configured as an iGate and sending data to aprs.fi.  Using the code generated from my callsign at http://apps.magicbug.co.uk/passcode/
 
 ## KissUtil
--configured to start automatically via the dw-start.sh script.
--is configured to read the /root/send directory for messages to send out 
--is configured to write to the /root/recieve directory for messages decoded by direwolf.
+- configured to start automatically via the dw-start.sh script
+- is configured to read the /root/send directory for messages to send out 
+- is configured to write to the /root/recieve directory for messages decoded by direwolf.
 
 ## weewx
 This directory contains the files that are modified for Weewx to correctly obtain data from the weatherstation using RTL_433 and also export the data into the listed text files.
