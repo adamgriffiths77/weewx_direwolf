@@ -15,7 +15,7 @@ This directory contains the files used on my raspberry pi (ws-2) for APRS weathe
 - Diamond X30N 2m/70cm antenna mounted at the ridge line of my house.
 - 12V to USB 3A converter to power the pi
 - a RAMP-25 Military grade 20/40W (20V off 12v) 30-512Mhz RF Amplifier
-- cheap 5V relay, plus misc stuff to get it to connect to the pi. A transistor and a couple of resistors, and a capacitor across the relay output to reducing ringing that was locking up my rado.
+- 3 Relay Raspberry PI hat (https://core-electronics.com.au/3-channel-relay-module-shield-smart-home-for-raspberry-pi-3.html)
 - All of this is now mounted in a nice small Pelican Hardcase with two antenna ports (one for recieving 433Mhz data and one for transmitting the APRS messages) and a military grade power connector connected to a 12V power supply.
 
 # Weatherstation Operation
